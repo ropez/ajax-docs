@@ -300,7 +300,7 @@ protected void RadGrid1_PreRender(object sender, EventArgs e)
 protected void GenerateText(GridDataItem gridItem)
 {
 	//you can use gridItem["columnUniqueName"].FindControl() to access child controls if needed
-	gridItem("myTemplateColumn").Text = gridItem.DataItem("SomeColumn").ToString();
+	gridItem["myTemplateColumn"].Text = gridItem.DataItem("SomeColumn").ToString();
 	//generate a string for Excel here, according to the concrete business logic
 	//and according to the Excel rules (e.g., special new line characters, simple strings without HTML, etc.)
 }
